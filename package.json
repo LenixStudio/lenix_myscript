@@ -1,0 +1,14 @@
+{
+  "name": "fivem-hello-world",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@citizenfx/client": "latest",
+    "@citizenfx/server": "latest"
+  }
+}
