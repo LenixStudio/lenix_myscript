@@ -5,13 +5,7 @@
     "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "./build",
     "lib": ["ES2020", "DOM"],
     "types": ["@citizenfx/client", "@citizenfx/server"]
-  },
-  "include": [
-    "client/**/*",
-    "server/**/*",
-    "web/src/**/*"
-  ]
+  }
 }

@@ -1,0 +1,1 @@
+on build update html and manifest using our new npm packages (new node_modules)
