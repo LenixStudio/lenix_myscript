@@ -1,5 +1,5 @@
 {
-  "name": "Lenix",
+  "name": "lenix-fivem-typescript-template",
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
