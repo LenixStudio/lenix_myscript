@@ -2,20 +2,23 @@
   "name": "lenix-fivem-typescript-template",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run build:client && npm run build:server && npm run build:frontend",
-    "build:client": "esbuild backend/client/**/*.ts --outdir=backend/client/build --platform=node --target=es2020 --minify",
-    "build:server": "esbuild backend/server/**/*.ts --outdir=backend/server/build --platform=node --target=es2020 --minify",
-    "build:frontend": "esbuild frontend/src/**/*.ts --outdir=frontend/build --platform=browser --target=es2020 --minify",
-    "watch": "npm run watch:client & npm run watch:server & npm run watch:frontend",
-    "watch:client": "esbuild backend/client/**/*.ts --outdir=backend/client/build --platform=node --target=es2020 --watch",
-    "watch:server": "esbuild backend/server/**/*.ts --outdir=backend/server/build --platform=node --target=es2020 --watch",
-    "watch:frontend": "esbuild frontend/src/**/*.ts --outdir=frontend/build --platform=browser --target=es2020 --watch"
+    "build": "npm run build:frontend && npm run build:client && npm run build:server",
+    
+    "build:frontend": "vite build --mode production",
+    "build:client": "esbuild backend/client/main.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/client.js",
+    "build:server": "esbuild backend/server/main.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/server.js",
+    
+    "watch": "npm run watch:frontend & npm run watch:client & npm run watch:server",
+    "watch:frontend": "vite build --watch",
+    "watch:client": "esbuild backend/client/main.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/client.js",
+    "watch:server": "esbuild backend/server/main.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/server.js"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0",
     "@citizenfx/client": "latest",
     "@citizenfx/server": "latest",
-    "esbuild": "^0.24.2"
+    "esbuild": "^0.24.2",
+    "vite": "^5.4.21"
   }
 }
