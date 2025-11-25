@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run build:client && npm run build:server && npm run build:frontend",
-    "build:client": "esbuild backend/client/main.ts --bundle --outfile=backend/client/build/main.js --platform=node --target=es2020 --minify --drop:console --drop:debugger",
-    "build:server": "esbuild backend/server/main.ts --bundle --outfile=backend/server/build/main.js --platform=node --target=es2020 --minify --drop:console --drop:debugger",
-    "build:frontend": "esbuild frontend/src/main.ts --bundle --outfile=frontend/build/main.js --platform=browser --target=es2020 --minify --drop:console --drop:debugger",
+    "build:client": "esbuild backend/client/**/*.ts --outdir=backend/client/build --platform=node --target=es2020 --minify",
+    "build:server": "esbuild backend/server/**/*.ts --outdir=backend/server/build --platform=node --target=es2020 --minify",
+    "build:frontend": "esbuild frontend/src/**/*.ts --outdir=frontend/build --platform=browser --target=es2020 --minify",
     "watch": "npm run watch:client & npm run watch:server & npm run watch:frontend",
-    "watch:client": "esbuild backend/client/main.ts --bundle --outfile=backend/client/build/main.js --platform=node --target=es2020 --watch",
-    "watch:server": "esbuild backend/server/main.ts --bundle --outfile=backend/server/build/main.js --platform=node --target=es2020 --watch",
-    "watch:frontend": "esbuild frontend/src/main.ts --bundle --outfile=frontend/build/main.js --platform=browser --target=es2020 --watch"
+    "watch:client": "esbuild backend/client/**/*.ts --outdir=backend/client/build --platform=node --target=es2020 --watch",
+    "watch:server": "esbuild backend/server/**/*.ts --outdir=backend/server/build --platform=node --target=es2020 --watch",
+    "watch:frontend": "esbuild frontend/src/**/*.ts --outdir=frontend/build --platform=browser --target=es2020 --watch"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
