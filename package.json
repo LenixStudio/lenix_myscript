@@ -4,15 +4,15 @@
   "scripts": {
     "build": "npm run build:client && npm run build:server && npm run build:frontend",
 
-    "build:client": "esbuild backend/client/main.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/client.js",
-    "build:server": "esbuild backend/server/main.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/server.js",
-    "build:frontend": "esbuild frontend/src/main.ts --bundle --platform=browser --target=es2020 --minify --outfile=frontend/build/main.js",
+    "build:client": "esbuild backend/client/index.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/client.js",
+    "build:server": "esbuild backend/server/index.ts --bundle --platform=node --target=es2020 --minify --outfile=backend/build/server.js",
+    "build:frontend": "esbuild frontend/src/index.ts --bundle --platform=browser --target=es2020 --minify --outfile=frontend/build/index.js",
 
     "watch": "concurrently \"npm:watch:client\" \"npm:watch:server\" \"npm:watch:frontend\"",
 
-    "watch:client": "esbuild backend/client/main.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/client.js",
-    "watch:server": "esbuild backend/server/main.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/server.js",
-    "watch:frontend": "esbuild frontend/src/main.ts --bundle --platform=browser --target=es2020 --watch --outfile=frontend/build/main.js"
+    "watch:client": "esbuild backend/client/index.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/client.js",
+    "watch:server": "esbuild backend/server/index.ts --bundle --platform=node --target=es2020 --watch --outfile=backend/build/server.js",
+    "watch:frontend": "esbuild frontend/src/index.ts --bundle --platform=browser --target=es2020 --watch --outfile=frontend/build/index.js"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
