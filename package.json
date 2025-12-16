@@ -12,7 +12,7 @@
     "watch:web": "esbuild web/src/index.ts --bundle --platform=browser --target=es2020 --watch --outfile=build/web.js"
   },
   "devDependencies": {
-    "@lenixdev/ui_componenets": "latest",
+    "@lenixdev/ui_components": "latest",
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0",
     "@citizenfx/client": "latest",
