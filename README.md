@@ -3,7 +3,7 @@
 ## Structure
 ```
 ├── shared/      - Shared types, constants, utils
-├── client/      - FiveM client (Lua runtime)
+├── client/      - FiveM client (JS runtime)
 ├── server/      - FiveM server (Node runtime)
 ├── web/         - Browser UI (NUI)
 └── build/       - Compiled output
