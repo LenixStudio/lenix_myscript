@@ -11,16 +11,26 @@
 
 ## Setup
 ```bash
-npm install
-npm run watch    # Development
-npm run build    # Production
+build (compile the ts files, production mode)
+watch (auto compiler, watches the changes made in the sc)
+reinstall (unsure to install the latest node_modules again)
 ```
 
-## Development
-- Add types in `shared/types/`
-- Server logic in `server/api/`
-- Client logic in `client/api/`
-- UI features in `web/src/features/`
+### Extra:
+- Build a specific side
+```bash
+build:client
+build:server
+build:web
+build:style
+```
+- Watch a specific side
+```bash
+watch:client
+watch:server
+watch:web
+watch:style
+```
 
 ## Common Issues
 This is causing esbuild to treat it as CommonJS because exports looks like a CommonJS pattern.
