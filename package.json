@@ -15,7 +15,6 @@
     "reinstall": "rimraf package-lock.json node_modules/.package-lock.json && npm install"
   },
   "devDependencies": {
-    "@lenixdev/ui_components": "latest",
     "@trippler/tr_kit": "latest",
     "@trippler/tr_lib": "latest",
     "typescript": "^5.0.0",
