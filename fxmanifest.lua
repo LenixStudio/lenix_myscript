@@ -1,5 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
+dependencies {
+  
+}
 
 author 'https://github.com/LenixDev'
 version '1.0.0'
