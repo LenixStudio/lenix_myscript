@@ -33,14 +33,16 @@ watch:style
 ```
 
 ## Common Issues
+> exports2 is not a function
+
 This is causing esbuild to treat it as CommonJS because exports looks like a CommonJS pattern.
+* exports does not exist on the client context by default like the server
 
 ### Example:
 exports('name', name) 
 exports('age', age)
 
-// output: exports2 is not a function
-
+use this on the client context only
 ### Solution:
 globalThis.exports('name', name) 
 globalThis.exports('age', age) 
