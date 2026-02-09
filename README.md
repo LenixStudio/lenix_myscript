@@ -11,25 +11,10 @@
 
 ## Setup
 ```bash
-build (compile the ts files, production mode)
-watch (auto compiler, watches the changes made in the sc)
-reinstall (unsure to install the latest node_modules again)
-```
+pnpm i
+pnpm nui
+pnpm build
 
-### Extra:
-- Build a specific side
-```bash
-build:client
-build:server
-build:nui
-build:style
-```
-- Watch a specific side
-```bash
-watch:client
-watch:server
-watch:nui
-watch:style
 ```
 
 ## Common Issues
