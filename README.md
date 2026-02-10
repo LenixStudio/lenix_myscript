@@ -1,4 +1,4 @@
-# Lenix TypeScript Template
+# TypeScript Boilerplate
 
 ## Structure
 ```
